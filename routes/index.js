@@ -39,7 +39,7 @@ const router = express.Router();
 // ════════════════════════════════════════════════════════════════════════════════
 // AUTH routes (no auth required)
 // ════════════════════════════════════════════════════════════════════════════════
-router.post("/auth/login",           login);
+router.post("/auth/login",protect,           login);
 router.get ("/auth/me",              protect, getMe);
 router.post("/auth/change-password", protect, changePassword);
 
